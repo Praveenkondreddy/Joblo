@@ -10,37 +10,70 @@ const Navbar= props => {
     history('/')
   }
   return (
-    <nav className="navigation">
-      <a href="/admin" className="brand-name">
-        Joblo
-      </a>
-      <button className="hamburger">
-        {/* icon from heroicons.com */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="white"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-            clipRule="evenodd"
+    <nav className="nav-header">
+    <div className="nav-content">
+      <div className="nav-bar-mobile-logo-container">
+        <img
+          className="website-logo"
+          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+          alt="website logo"
+        />
+
+        <button type="button" className="nav-mobile-btn">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
+            alt="nav logout"
+            className="nav-bar-image"
           />
-        </svg>
-      </button>
-      <div
-        className="navigation-menu">
-        <ul>
-          <li>
-            <a href="/applicants">Applicants</a>
-          </li>
-          <li>
-            <a href="/">Logout</a>
-          </li>
-        </ul>
+        </button>
       </div>
-    </nav>
+
+      <div className="nav-content nav-bar-large-container">
+        <img
+          className="website-logo"
+          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+          alt="website logo"
+        />
+        <ul className="nav-menu">
+          <li className="nav-menu-item">Home</li>
+
+          <li className="nav-menu-item">Products</li>
+
+          <li className="nav-menu-item">Cart</li>
+        </ul>
+        <button type="button" className="logout-desktop-btn">
+          Logout
+        </button>
+      </div>
+    </div>
+    <div className="nav-menu-mobile">
+      <ul className="nav-menu-list-mobile">
+        <li className="nav-menu-item-mobile">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
+            alt="nav home"
+            className="nav-bar-image"
+          />
+        </li>
+
+        <li className="nav-menu-item-mobile">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
+            alt="nav products"
+            className="nav-bar-image"
+          />
+        </li>
+
+        <li className="nav-menu-item-mobile">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
+            alt="nav cart"
+            className="nav-bar-image"
+          />
+        </li>
+      </ul>
+    </div>
+  </nav>
   )
 }
 export default Navbar

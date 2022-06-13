@@ -12,6 +12,10 @@ function Home() {
  // const  a=Object.values(user[0])
  
   
+ const apply=() =>{
+  
+ }
+ 
   useEffect(() => {
     const fetch = async () => {
        const res = await axios.get(apiUrl + "posts");              
@@ -23,21 +27,25 @@ function Home() {
 
   return (
     <>
-<Header />
+    <Header />
     <div class="home-container">
       
       {user.map(i =>(
+         <div class="home-post"> 
         <div key={i.Id}>
-        <h1 >{i.companyName}</h1>
+        <h3>{i.companyName}</h3>
+        <p>{i.jobPosition}</p>
+
+        <p>{i.companyPlace}</p>
+        <button onClick={apply()} class="btn">Apply</button>
+        </div>
+      
         </div>
       ))}
     
     </div>
     </>
-    
     )
-    
-  
 }
 
 export default Home

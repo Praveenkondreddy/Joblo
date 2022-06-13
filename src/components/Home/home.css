@@ -1,14 +1,22 @@
-.posts-container{
-    height: 40px;
-    width: 50px;
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
+
 .home-container{
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
+    padding: 20px;
 }
+
+.home-post{
+
+    height: 200px;
+    width: 240px;
+    background-color:aquamarine;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: inset;
+
+
+}
+
