@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+
 import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom';
 import './header.css'
@@ -36,7 +36,7 @@ const Header = props => {
             <a href="/profile">Profile</a>
           </li>
           <li>
-            <a href="/">Logout</a>
+            <a href="/" onClick={onClickLogout}>Logout</a>
           </li>
         </ul>
       </div>

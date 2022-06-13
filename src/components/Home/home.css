@@ -21,3 +21,14 @@
 
 }
 
+.companyName{
+    color: blue;
+}
+
+.apply{
+   height: 20px;
+    background-color: blue;
+    color: aliceblue;
+    border: 1px;
+    border-radius: 3px;
+}

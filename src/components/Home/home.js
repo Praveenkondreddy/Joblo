@@ -34,11 +34,11 @@ function Home() {
         <div key={i.Id}>
          <div class="home-post"> 
         
-        <h3>{i.companyName}</h3>
+        <h3 class="companyName">{i.companyName}</h3>
         <p>{i.jobPosition}</p>
         <p>{i.description}</p>
         <p>{i.companyPlace}</p>
-        <button onClick={apply} class="btn">Apply</button>
+        <button class="apply" onClick={apply}>Apply</button>
         </div>
       
         </div>

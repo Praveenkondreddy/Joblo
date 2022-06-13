@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import './admin.css'
 import axios from "axios";
-import Header from '../Header/header.js'
 import Navbar from '../Navbar/navbar';
 
 const apiUrl = "http://localhost:8080/"
