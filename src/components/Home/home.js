@@ -7,20 +7,20 @@ const apiUrl = "http://localhost:8080/"
 function Home() {
      
   const [user,setUser]=useState([])
- 
- 
- // const  a=Object.values(user[0])
- 
   
- const apply=() =>{
-  
- }
+  const apply= async () =>{
+    const res = await axios.get(apiUrl + "posts");
+    console.log(res.data)
+    
+  }
  
   useEffect(() => {
+    
     const fetch = async () => {
        const res = await axios.get(apiUrl + "posts");              
        setUser(res.data);              
     };
+
     fetch();
   }, []);
 
@@ -31,13 +31,14 @@ function Home() {
     <div class="home-container">
       
       {user.map(i =>(
-         <div class="home-post"> 
         <div key={i.Id}>
+         <div class="home-post"> 
+        
         <h3>{i.companyName}</h3>
         <p>{i.jobPosition}</p>
-
+        <p>{i.description}</p>
         <p>{i.companyPlace}</p>
-        <button onClick={apply()} class="btn">Apply</button>
+        <button onClick={apply} class="btn">Apply</button>
         </div>
       
         </div>
