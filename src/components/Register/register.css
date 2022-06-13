@@ -1,0 +1,15 @@
+.register-inner{
+    text-align: center;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 150px;
+    width: 100vw;
+    padding-bottom: 200px;
+    background-color: aliceblue;
+}
+
+
+ 
+
