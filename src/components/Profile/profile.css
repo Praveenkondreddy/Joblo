@@ -3,17 +3,12 @@
     display: flex;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     flex-direction: column;
-    justify-content: left;
-    padding-top: 80px;
-    padding-left: 410px;
-    padding-right: 200px;
-    width: 50vw;
-    padding-bottom: 150px;
-    background-color: aliceblue;
+    justify-content: center;
+    align-content: center;
+
+  
 }
-.form-class{
-    width: 100vw;
-}
+
 .login-input{
     width: auto;
     background-color: blue;
@@ -21,4 +16,12 @@
     border-radius: 7px;
     border-width: 1px;
     padding: 3px;
+}
+.form-class{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background-color: aliceblue;
 }
