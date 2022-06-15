@@ -1,67 +1,46 @@
 
-.input{
-    border-radius: 5px;
-    border-width: 1px;
-    padding: 4px;
+
+.login-class{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: aqua;
 }
-.home-desktop-img{
-    height: 100%;
+
+
+
+
+
+@media screen and (min-width:690px) {
+   .logins-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   }
+   .login-class{
+    width: 50vw;
+   }
+   .image{
     width: 50vw;
     background-size: cover;
-}
-.form-group{
-    border-radius: 10px;
-    border-width: 0px;
-}
-
-.login{
-    background-color: blue;
-    border-width: 1px;
-    width: 60px;
-    padding: 3px;
-    color: aliceblue;
-}
-@media screen and (min-width:690px) {
-    .container{
-        display: flex;
-        flex-direction: row;
-    } 
-
-    .login-inner{
-        text-align: center;
-        display: flex;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 200px;
-        width: 50vw;
-        padding-bottom: 200px;
-        background-color: aliceblue;
-    }
+   }
    
 }
 
 @media screen and (max-width:690px) {
-    .container{
+    .logins-container{
         display: flex;
-        flex-direction: column;
-    } 
-
-    .login-inner{
-        text-align: center;
-        display: flex;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         flex-direction: column;
         justify-content: center;
-        padding-top: 80px;
-        width: 100vw;
-        padding-bottom: 100px;
-        background-color: aliceblue;
-    }
-    .home-desktop-img{
-        height: 60vh;
-        width: 100vw;
+       }
+       .login-class{
+        height: 50vh;
+       }
+       .image{
+        height: 50vh;
         background-size: cover;
-    }
+       }
+    
 }
-

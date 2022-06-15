@@ -17,7 +17,7 @@ function Register() {
 
 
   return (
-    <div class="container">
+    <div class="register-container">
      
     <div class="form-class">
     <form onSubmit={submitHandler}>

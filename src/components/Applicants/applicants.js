@@ -24,6 +24,7 @@ function Applicants() {
   return (
     <>
     <Navbar />
+    <div class="app-container">
     <div class="applicant-container">
       
       {user.map(i =>(
@@ -39,7 +40,7 @@ function Applicants() {
       
         </div>
       ))}
-    
+    </div>
     </div>
     </>
     )

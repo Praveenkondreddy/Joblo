@@ -19,42 +19,44 @@ function Admin() {
   return (
       <>
       <Navbar />
-    <div class="container">
+    <div class="admin-container">
      
-    <div class="form-class">
+    <div class="form-container">
     <form onSubmit={submitHandler}>
-     <div class="admin-inner">
+     
       <h4>Job Posting :</h4>
       
       <div class="form-group">
       <label htmlFor='name'>Company Name : </label>
       <input type="text" class="input" name="name" onChange={e =>setDetails({...details, companyName:e.target.value})} value={details.companyName}/>  
       </div>
-      <hr />
+      <br></br>
       <div class="form-group">
       <label htmlFor='jobPosition'>Job Position : </label>
       <input type="text" class="input" name="jobPositiom" onChange={e =>setDetails({...details, jobPosition:e.target.value})} value={details.jobPosition}/>  
       </div>
-      <hr />
+      <br></br>
       <div class="form-group">
       <label htmlFor='companyPlace'>Company Place : </label>
       <input type="text" class="input" name="companyPlace" onChange={e =>setDetails({...details, companyPlace:e.target.value})} value={details.companyPlace} />  
       </div>
-      <hr />
+      <br></br>
       <div class="form-group">
       <label htmlFor='description'>Description : </label>
       <input type="text" class="input" name="description" onChange={e =>setDetails({...details, description:e.target.value})} value={details.description} />  
       </div>
-      <hr />
+      <br></br>
+      
       <div class="form-group">
-      <input type="submit" class="login-input" value="Upload Post" />  
-      </div><br />
+      <input type="submit" class="upload-input" value="Upload Post" />  
+    
      
   
      </div>
     </form>
-    
     </div>
+    
+    
     
     </div></>
   )

@@ -36,17 +36,18 @@ const log= (jwt,status)=>{
 }
 
   return (
-    <div class="container">
-     <div class="image">
+    <div class="logins-container">
+     <div class="login-image">
       <img
         src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-img.png"
         alt="dresses to be noticed"
         className="home-desktop-img"
       />
       </div> 
-    <div class="form-class">
+    <div class="login-class">
+    <div class="login-inner">
     <form onSubmit={submitHandler}>
-     <div class="login-inner">
+     
       <h2>Welcome back,</h2>
       <h4>Please enter your details</h4>
       
@@ -54,12 +55,12 @@ const log= (jwt,status)=>{
       <label htmlFor='username'>Username : </label>
       <input type="text" class="input" name="username" onChange={e =>setDetails({...details, username:e.target.value})} value={details.username}/>  
       </div>
-      <hr />
+      <br></br>
       <div class="form-group">
       <label htmlFor='password'>Password : </label>
       <input type="password" class="input" name="password" onChange={e =>setDetails({...details, password:e.target.value})} value={details.password} />  
       </div>
-      <hr />
+      <br></br>
       <div class="form-group">
       <input type="submit" class="login input" value="Login" />  
       </div><br />
@@ -69,8 +70,9 @@ const log= (jwt,status)=>{
       
         </div>
   
-     </div>
+     
     </form>
+    </div>
     
     </div>
     

@@ -5,7 +5,8 @@
     flex-direction: row;
     justify-content: left;
     padding: 20px;
-    box-shadow: 2px;
+    background-color: aliceblue;
+    height: 100vh;
 }
 
 .home-post{
