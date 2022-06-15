@@ -6,6 +6,7 @@
     justify-content: left;
     padding: 20px;
     box-shadow: 2px;
+    flex-wrap: wrap;
 }
 
 .applicant-post{
@@ -26,7 +27,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    
 }
 
 .companyName{
