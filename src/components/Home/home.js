@@ -8,10 +8,15 @@ function Home() {
      
   const [user,setUser]=useState([])
   
-  const apply= async () =>{
-    const res = await axios.get(apiUrl + "posts");
-    console.log(res.data)
-    
+  const apply= i => async () =>{
+    const res = await axios.get(apiUrl + "profile");
+    const profile=res.data[0]
+    const {name,email,phoneno}=profile
+    const {Id,companyName,jobPosition}= i
+    const details={name,email,phoneno,jobId:Id,companyName,jobPosition}
+
+    const app=await axios.post(apiUrl+"applicants",details)
+    console.log(app)    
   }
  
   useEffect(() => {
@@ -38,7 +43,7 @@ function Home() {
         <p>{i.jobPosition}</p>
         <p>{i.description}</p>
         <p>{i.companyPlace}</p>
-        <button class="apply" onClick={apply}>Apply</button>
+        <button class="apply" onClick={apply(i)}>Apply</button>
         </div>
       
         </div>

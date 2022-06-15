@@ -1,0 +1,27 @@
+
+.applicant-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 20px;
+    box-shadow: 2px;
+}
+
+.applicant-post{
+
+    height: 200px;
+    width: 240px;
+    background-color:aquamarine;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.companyName{
+    color: blue;
+}
+

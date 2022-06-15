@@ -33,7 +33,7 @@ const Navbar= props => {
         className="navigation-menu">
         <ul>
           <li>
-            <a href="/applicants">Applicants</a>
+            <a href="/applicant">Applicants</a>
           </li>
           <li>
             <a href="/" onClick={onClickLogout}>Logout</a>
