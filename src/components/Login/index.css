@@ -28,6 +28,13 @@
    }
    
 }
+.register-btn{
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 3px;
+    border-width: 1px;
+    padding: 2px;
+}
 
 @media screen and (max-width:690px) {
     .logins-container{

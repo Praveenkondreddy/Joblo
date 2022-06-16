@@ -43,7 +43,7 @@ function Admin() {
       <br></br>
       <div class="form-group">
       <label htmlFor='description'>Description : </label>
-      <input type="text" class="input" name="description" onChange={e =>setDetails({...details, description:e.target.value})} value={details.description} />  
+      <textarea rows={2}  type="text" class="input" name="description" onChange={e =>setDetails({...details, description:e.target.value})} value={details.description} />  
       </div>
       <br></br>
       

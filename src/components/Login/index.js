@@ -66,7 +66,7 @@ const log= (jwt,status)=>{
       </div><br />
       <div>
         <Link to="/register">
-        <button class="btn btn-primary">Register us!</button></Link>
+        <button class="register-btn">Register us!</button></Link>
       
         </div>
   

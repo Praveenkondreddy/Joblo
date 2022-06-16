@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './register.css'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const apiUrl = "http://localhost:8080/"
 
@@ -40,7 +41,8 @@ function Register() {
       </div>
       <hr />
       <div class="form-group">
-      <input type="submit" class="login input" value="Register" />  
+        <Link to="/">
+      <input type="submit" class="login input" value="Register" />  </Link>
       </div><br />
      
   
