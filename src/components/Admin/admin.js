@@ -7,7 +7,7 @@ const apiUrl = "http://localhost:8080/"
 
 function Admin() {
 
-    const [details,setDetails]=useState({name:"",email:""})
+    const [details,setDetails]=useState({companyName:"",jobPosition:"",companyPlace:"",description:""})
     const submitHandler= async (e) => {
       e.preventDefault()
       
@@ -27,8 +27,8 @@ function Admin() {
       <h4>Job Posting :</h4>
       
       <div class="form-group">
-      <label htmlFor='name'>Company Name : </label>
-      <input type="text" class="input" name="name" onChange={e =>setDetails({...details, companyName:e.target.value})} value={details.companyName}/>  
+      <label htmlFor='companyName'>Company Name : </label>
+      <input type="text" class="input" name="companyName" onChange={e =>setDetails({...details, companyName:e.target.value})} value={details.companyName}/>  
       </div>
       <br></br>
       <div class="form-group">
