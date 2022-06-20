@@ -12,7 +12,7 @@ function Home() {
   const [user,setUser]=useState([])
   
   const apply= i => async () =>{
-    toast.success(`Application for ${i.companyName} posted successfully `,{position:toast.POSITION.BOTTOM_RIGHT})
+    toast.success(`Application for ${i.companyName} posted successfully `,{theme:"light", position:toast.POSITION.BOTTOM_RIGHT})
     const res = await axios.get(apiUrl + "profile");
     const profile=res.data[0]
     const {name,email,phoneno}=profile

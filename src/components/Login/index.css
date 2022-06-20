@@ -33,7 +33,7 @@
     color: aliceblue;
     border-radius: 3px;
     border-width: 1px;
-    padding: 2px;
+    padding: 4px;
 }
 
 @media screen and (max-width:690px) {
