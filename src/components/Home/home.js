@@ -1,14 +1,18 @@
 import React, { useState,useEffect } from 'react'
 import './home.css'
 import axios from "axios";
+import { ToastContainer,toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import Header from '../Header/header.js'
 const apiUrl = "http://localhost:8080/"
+
 
 function Home() {
      
   const [user,setUser]=useState([])
   
   const apply= i => async () =>{
+    toast.success('Application posted',{position:toast.POSITION.BOTTOM_RIGHT})
     const res = await axios.get(apiUrl + "profile");
     const profile=res.data[0]
     const {name,email,phoneno}=profile
@@ -44,6 +48,7 @@ function Home() {
         <p>{i.description}</p>
         <p>{i.companyPlace}</p>
         <button class="apply" onClick={apply(i)}>Apply</button>
+        <ToastContainer />
         </div>
       
         </div>
