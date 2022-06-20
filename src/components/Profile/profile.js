@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import './profile.css'
 import axios from "axios";
+import { ToastContainer,toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const apiUrl = "http://localhost:8080/"
 
@@ -12,7 +14,8 @@ function Profile() {
       
       const {data}= await axios.post(apiUrl + "editProfile",details);
       console.log(data)
-      
+      toast.info("Profile edited successfully",{position:toast.POSITION.BOTTOM_RIGHT})
+
 } 
 
   return (
@@ -61,6 +64,7 @@ function Profile() {
       <br></br>
       <div class="form-group">
       <input type="submit" class="login-input" value="Edit profile" />  
+      <ToastContainer />
       </div> <br></br>
      
   

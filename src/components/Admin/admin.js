@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import './admin.css'
 import axios from "axios";
 import Navbar from '../Navbar/navbar';
-
+import { ToastContainer,toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 const apiUrl = "http://localhost:8080/"
 
 function Admin() {
@@ -13,7 +14,7 @@ function Admin() {
       
       const {data}= await axios.post(apiUrl + "posts",details);
       console.log(data)
-      
+      toast.info("Job Posted Successfully",{position:toast.POSITION.BOTTOM_RIGHT})
 } 
 
   return (
@@ -49,6 +50,7 @@ function Admin() {
       
       <div class="form-group">
       <input type="submit" class="upload-input" value="Upload Post" />  
+      <ToastContainer />
     
      
   

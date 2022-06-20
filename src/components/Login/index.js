@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import './index.css'
 import axios from "axios";
 import Cookies from 'js-cookie'
+import { ToastContainer,toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const apiUrl = "http://localhost:8080/"
 
@@ -26,6 +28,7 @@ const history = useNavigate();
 const log= (jwt,status)=>{
   if (jwt !== undefined && status==='admin'){
     history('/admin')
+    toast.success("Login Successfull",{position:toast.POSITION.BOTTOM_RIGHT})
 
   }else if(jwt !== undefined ){
     history('/home')
@@ -67,6 +70,7 @@ const log= (jwt,status)=>{
       <div>
         <Link to="/register">
         <button class="register-btn">Register us!</button></Link>
+        <ToastContainer />
       
         </div>
   

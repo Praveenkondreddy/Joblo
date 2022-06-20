@@ -1,18 +1,25 @@
 import React, {useState} from 'react'
 import './register.css'
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { ToastContainer,toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const apiUrl = "http://localhost:8080/"
 
 function Register() {
-
+  const history = useNavigate();
     const [details,setDetails] = useState({username:"",password:"",email:""})
     const submitHandler= async (e) => {
       e.preventDefault()
       
       const {data}= await axios.post(apiUrl + "register",details);
       console.log(data)
+      toast.info("Profile registered successfully",{position:toast.POSITION.BOTTOM_RIGHT})
+      
+      if(data === "It is registered"){
+        history('/')
+      }
       
 } 
 
@@ -41,8 +48,9 @@ function Register() {
       </div>
       <hr />
       <div class="form-group">
-        <Link to="/">
-      <input type="submit" class="login input" value="Register" />  </Link>
+        
+      <input type="submit" class="login input" value="Register" />  
+      <ToastContainer />
       </div><br />
      
   
