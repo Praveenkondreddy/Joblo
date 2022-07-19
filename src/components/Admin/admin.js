@@ -4,7 +4,7 @@ import axios from "axios";
 import Navbar from '../Navbar/navbar';
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-const apiUrl = "http://localhost:8080/"
+const apiUrl = "http://localhost:3000/"
 
 function Admin() {
 

@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-const apiUrl = "http://localhost:8080/"
+const apiUrl = "http://localhost:3000/users/"
 
 function Login() {
 
@@ -18,8 +18,8 @@ function Login() {
       let jwtToken
       
       const {data}= await axios.post(apiUrl + "login",details);
-      const jwt=data.jwtToken
-      const status=data.status
+      const jwt=data.jwt
+      const status=data.user.status
       Cookies.set('jwt_token', jwtToken, {expires: 30})
       console.log(jwt)
       log(jwt,status)

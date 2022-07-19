@@ -4,7 +4,7 @@ import axios from "axios";
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Header from '../Header/header.js'
-const apiUrl = "http://localhost:8080/"
+const apiUrl = "http://localhost:3000/"
 
 
 function Home() {
@@ -14,16 +14,24 @@ function Home() {
   const apply= i => async () =>{
     toast.success(`Application for ${i.companyName} posted successfully `,{theme:"light", position:toast.POSITION.BOTTOM_RIGHT})
     const res = await axios.get(apiUrl + "profile");
-    const profile=res.data[0]
+    console.log(res)
+    const profiles=res.data
+    const profile=profiles[profiles.length-1]
     const {name,email,phoneno}=profile
-    const {Id,companyName,jobPosition}= i
-    const details={name,email,phoneno,jobId:Id,companyName,jobPosition}
-
+    const {id,companyName,jobPosition}= i
+    const details={name,email,phoneno,jobId:id,companyName,jobPosition}
     const app=await axios.post(apiUrl+"applicants",details)
     console.log(app)    
   }
  
   useEffect(() => {
+
+    navigator.geolocation.getCurrentPosition((position)=>{
+
+      console.log(position.coords.latitude);
+      console.log(position.coords.longitude);
+      
+    })
     
     const fetch = async () => {
        const res = await axios.get(apiUrl + "posts");              

@@ -3,22 +3,27 @@ import './profile.css'
 import axios from "axios";
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import Header from '../Header/header';
 
-const apiUrl = "http://localhost:8080/"
+const apiUrl = "http://localhost:3000/"
 
 function Profile() {
 
-    const [details,setDetails]=useState({name:"",email:"",phone:"",interMarks:"",degreePercentage:"",currentOrganisation:"",experience:""})
+    const [details,setDetails]=useState({name:"",email:"",phoneno:"",interMarks:"",degreePercentage:"",currentOrganisation:"",experience:""})
     const submitHandler= async (e) => {
       e.preventDefault()
-      
-      const {data}= await axios.post(apiUrl + "editProfile",details);
+      const email=details.email
+      const user= await axios.get(apiUrl + `users/email/${email}`);
+      console.log(user)
+      const {data}= await axios.post(apiUrl + "profile",{...details,userId:user.data.id});
       console.log(data)
       toast.info("Profile edited successfully",{position:toast.POSITION.BOTTOM_RIGHT})
 
 } 
 
   return (
+    <>
+    <Header />
     <div class="profile-container">
      
     <div class="form-class">
@@ -39,7 +44,7 @@ function Profile() {
       <br></br>
       <div class="form-group">
       <label htmlFor='phone'>Phone No : </label>
-      <input type="text" class="input" name="phone" onChange={e =>setDetails({...details, phone:e.target.value})} value={details.phone} />  
+      <input type="text" class="input" name="phoneno" onChange={e =>setDetails({...details, phoneno:e.target.value})} value={details.phoneno} />  
       </div>
       <br></br>
       <div class="form-group">
@@ -74,6 +79,7 @@ function Profile() {
     </div>
     
     </div>
+    </>
   )
 }
 

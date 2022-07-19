@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import './applicants.css'
 import axios from "axios";
 import Navbar from '../Navbar/navbar';
-const apiUrl = "http://localhost:8080/"
+const apiUrl = "http://localhost:3000/"
 
 function Applicants() {
      
