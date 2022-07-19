@@ -5,7 +5,7 @@ import axios from "axios";
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-const apiUrl = "http://localhost:3000/"
+const apiUrl = "http://localhost:3000/users/"
 
 function Register() {
 //  const history = useNavigate();
