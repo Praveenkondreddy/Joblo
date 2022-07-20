@@ -20,6 +20,7 @@ function Login() {
       const {data}= await axios.post(apiUrl + "login",details);
       const jwt=data.jwt
       const status=data.user.status
+      Cookies.set("userId",data.user.id)
       Cookies.set('jwt_token', jwtToken, {expires: 30})
       console.log(jwt)
       log(jwt,status)

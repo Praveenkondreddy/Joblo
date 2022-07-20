@@ -4,6 +4,7 @@ import axios from "axios";
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Header from '../Header/header.js'
+import Cookies from 'js-cookie';
 const apiUrl = "http://localhost:3000/"
 
 
@@ -13,10 +14,11 @@ function Home() {
   
   const apply= i => async () =>{
     toast.success(`Application for ${i.companyName} posted successfully `,{theme:"light", position:toast.POSITION.BOTTOM_RIGHT})
-    const res = await axios.get(apiUrl + "profile");
+    const userId=Cookies.get("userId")
+    const res = await axios.get(apiUrl + `profile/${userId}`);
     console.log(res)
-    const profiles=res.data
-    const profile=profiles[profiles.length-1]
+    const profile=res.data
+
     const {name,email,phoneno}=profile
     const {id,companyName,jobPosition}= i
     const details={name,email,phoneno,jobId:id,companyName,jobPosition}
