@@ -16,9 +16,7 @@ function Home() {
     toast.success(`Application for ${i.companyName} posted successfully `,{theme:"light", position:toast.POSITION.BOTTOM_RIGHT})
     const userId=Cookies.get("userId")
     const res = await axios.get(apiUrl + `profile/${userId}`);
-    console.log(res)
     const profile=res.data
-
     const {name,email,phoneno}=profile
     const {id,companyName,jobPosition}= i
     const details={name,email,phoneno,jobId:id,companyName,jobPosition}
